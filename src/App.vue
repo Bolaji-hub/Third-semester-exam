@@ -1,22 +1,8 @@
 <script setup>
-import { ref } from "vue";
-const initialValue = 0;
-const counter = ref(initialValue);
-const inputValue = ref(null);
+import useCounter from "./composables/useCounter";
 
-const setValue = () => {
-  counter.value = inputValue.value;
-  inputValue.value = null;
-};
-const increment = () => {
-  counter.value++;
-};
-const decrement = () => {
-  counter.value--;
-};
-const reset = () => {
-  counter.value = initialValue;
-};
+const { counter, inputValue, setValue, increment, decrement, reset } =
+  useCounter();
 </script>
 
 <template>
