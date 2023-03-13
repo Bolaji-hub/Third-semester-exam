@@ -1,5 +1,11 @@
 import { ref } from "vue";
 export default function useCounter(initialValue = 0) {
+  const increment = () => {
+    counter.value++;
+  };
+  const decrement = () => {
+    counter.value--;
+  };
   const counter = ref(initialValue);
   const inputValue = ref(null);
 
@@ -7,12 +13,7 @@ export default function useCounter(initialValue = 0) {
     counter.value = inputValue.value;
     inputValue.value = null;
   };
-  const increment = () => {
-    counter.value++;
-  };
-  const decrement = () => {
-    counter.value--;
-  };
+
   const reset = () => {
     counter.value = initialValue;
   };
