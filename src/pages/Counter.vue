@@ -7,7 +7,6 @@ const { counter, inputValue, setValue, increment, decrement, reset } =
 
 <template>
   <div class="container">
-    <h2>Welcome To My Third Semester Exam Project</h2>
     <main>
       <h1>{{ counter }}</h1>
       <button @click="increment">+</button>
@@ -53,9 +52,9 @@ button {
 }
 input {
   margin: 20px;
-  width: 40%;
+  width: 50%;
   margin: 20px;
-  border-color: blueviolet;
+  border-color: ghostwhite;
   padding: 20px;
   border-radius: 10px;
   align-items: center;

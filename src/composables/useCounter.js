@@ -1,21 +1,25 @@
-import { ref } from "vue";
-export default function useCounter(initialValue = 0) {
+import { ref, computed } from "vue";
+import { useStore } from "vuex";
+
+export default function useCounter() {
+  const store = useStore();
+
+  const counter = computed(() => store.state.counter);
+
   const increment = () => {
-    counter.value++;
+    store.commit("increment");
   };
   const decrement = () => {
-    counter.value--;
+    store.commit("decrement");
   };
-  const counter = ref(initialValue);
   const inputValue = ref(null);
 
   const setValue = () => {
-    counter.value = inputValue.value;
-    inputValue.value = null;
+    store.commit("setValue", inputValue.value);
   };
 
   const reset = () => {
-    counter.value = initialValue;
+    store.commit("reset");
   };
 
   return {
