@@ -39,6 +39,13 @@ const { counter, inputValue, setValue, increment, decrement, reset } =
   padding: 30px;
   margin: 10px;
 }
+h1 {
+  color: black;
+  font-size: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 button {
   color: black;
