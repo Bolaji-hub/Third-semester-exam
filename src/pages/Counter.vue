@@ -8,7 +8,8 @@ const { counter, inputValue, setValue, increment, decrement, reset } =
 <template>
   <div class="container">
     <main>
-      <h1>{{ counter }}</h1>
+      <h1>Counter App</h1>
+      <h2>{{ counter }}</h2>
       <div>
         <button class="increment" @click="increment">+</button>
         <button class="decrement" @click="decrement">-</button>
@@ -52,6 +53,10 @@ main {
   align-items: center;
 }
 h1 {
+  font-size: x-large;
+  font-weight: bold;
+}
+h2 {
   color: black;
   font-size: bold;
   display: flex;
@@ -69,6 +74,12 @@ button {
   background-color: grey;
   width: 100px;
   cursor: pointer;
+}
+.increment {
+  font-weight: bold;
+}
+.decrement {
+  font-weight: bold;
 }
 
 input {
