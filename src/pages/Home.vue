@@ -35,6 +35,7 @@ nav {
   font-weight: bolder;
   margin-left: 0cap;
 }
+
 .nav {
   padding-left: 10px;
   padding-right: 10px;
